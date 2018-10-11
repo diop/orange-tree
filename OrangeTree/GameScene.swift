@@ -63,7 +63,7 @@ class GameScene: SKScene {
         
         for node in nodes(at: location) {
             if node.name == "sun" {
-                let n = Int(arc4random() % numOfLevels + 1)
+                let n = Int.random(in: 1 ... 2)
                 if let scene = GameScene.Load(level: n) {
                     scene.scaleMode = .aspectFill
                     if let view = view {
